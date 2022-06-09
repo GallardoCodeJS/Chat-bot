@@ -1,0 +1,30 @@
+<div class="container">
+	<h1>-ChatBot-Ignacio</h1>	
+	<div class="chat--container">
+		<!-- Sector Chat -->
+		<div id="chat" class="chat--body">
+			<!-- ng-repat 'Muestra todos los resultados de los elementos dentro de model.chats'--> 
+			<li class="{{chat.classes}}" ng-repeat="chat in model.chats">
+				<b>{{chat.name}}: </b>
+				<span>{{chat.msg}}</span>
+				<img src="{{chat.img}}">
+				<a href="{{chat.url}}" target="_blank">{{chat.url}}</a>
+				<br>
+				<span>{{chat.id}}</span>
+				<span>{{chat.marca}}</span>
+				<span>{{chat.medida}}</span>
+			</li>
+		</div>
+
+		<br>
+			<div id="plano">
+				<div id="txt">
+					<textarea type="text" name="entrada" placeholder="Escriba mensaje" ng-model="uiAction.msg"></textarea>
+				</div>
+				<div id="btn">					
+					<button id="enviar" name="enviar" class="enviar" ng-click="pushMsg()">Enviar</button>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>

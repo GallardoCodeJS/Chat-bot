@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- ng-app define el nombre de la app-->
+<html ng-app="app">
+<head>
+	<!-- require meta -->
+	<meta charset="utf-8">
+
+	<!-- Bootstrap -->
+	<!--
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	-->
+
+	<link rel="stylesheet" type="text/css" href="components/home/style/style.css">
+
+	<!-- Etiqueta angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>	
+
+	<title>ChatBot -Nacho-</title>
+</head>
+
+<!-- ng-controller -->
+<body id="todo" ng-controller="MainCtrl">
+
+	<!-- Definimos apartado en la app -->
+	<div id="panel" ng-include="'components/home/views/indexView.html'" ng-controller="HomeCtrl"></div>
+	<!-- ENV -->
+	<script type="text/javascript" src="env.js"></script>
+
+	<!-- APP -->
+	<script type="text/javascript" src="app.js"></script>
+
+	<!-- CTRL -->
+	<script type="text/javascript" src="components/home/controllers/home.controller.js"></script>
+	
+	<!-- SERVICES -->
+	<script type="text/javascript" src="components/home/services/productos.js"></script>
+	<script type="text/javascript" src="components/home/services/contactos.js"></script>
+	<script type="text/javascript" src="components/home/services/checkout.js"></script>
+
+</body>
+</html>
